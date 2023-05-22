@@ -1,0 +1,113 @@
+\doxysection{D\+:/\+UMB/cs410/esp32 c++/cs410\+\_\+6\+A/src/main.cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{D:/UMB/cs410/esp32 c++/cs410\_6A/src/main.cpp@{D:/UMB/cs410/esp32 c++/cs410\_6A/src/main.cpp}}
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+{\ttfamily \#include $<$Wi\+Fi\+Client\+Secure.\+h$>$}\newline
+{\ttfamily \#include $<$SPIFFS.\+h$>$}\newline
+{\ttfamily \#include \"{}at\+\_\+client.\+h\"{}}\newline
+{\ttfamily \#include \"{}constants.\+h\"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{main_8cpp_aeb7a7ba1ab7e0406f1b5ab36d579f585}{LED}}~2
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}{setup}} ()
+\begin{DoxyCompactList}\small\item\em Setup function called once during program startup. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_afe461d27b9c48d5921c00d521181f12f}{loop}} ()
+\begin{DoxyCompactList}\small\item\em Loop function called repeatedly after the setup function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{main_8cpp_ac86ab61d2192250321b5877b0af1084c}{pin}} = 35
+\item 
+const auto \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{main_8cpp_aba94be699c5a145fef37b68edb5af26d}{esp32}} = new At\+Sign(\"{}@20domestic45\"{})
+\begin{DoxyCompactList}\small\item\em Create instances of At\+Sign for different devices. \end{DoxyCompactList}\item 
+const auto \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{main_8cpp_a13de7b703b5accf136e2705da3984722}{flutter}} = new At\+Sign(\"{}@grumpy7196\"{})
+\begin{DoxyCompactList}\small\item\em Create an instance of At\+Sign for the Flutter program. \end{DoxyCompactList}\item 
+const auto \mbox{\hyperlink{main_8cpp_ae4de5f96ee72cc6ad27b99241f51533c}{keys}} = keys\+\_\+reader\+::read\+\_\+keys(\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8cpp_aba94be699c5a145fef37b68edb5af26d}{esp32}})
+\begin{DoxyCompactList}\small\item\em Read keys from the ESP32. \end{DoxyCompactList}\item 
+auto \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{main_8cpp_abedb381eaf857e52008fd20cf6270b1c}{at\+\_\+client}} = new At\+Client(\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8cpp_aba94be699c5a145fef37b68edb5af26d}{esp32}}, \mbox{\hyperlink{main_8cpp_ae4de5f96ee72cc6ad27b99241f51533c}{keys}})
+\begin{DoxyCompactList}\small\item\em Create an instance of At\+Client. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{main_8cpp_aeb7a7ba1ab7e0406f1b5ab36d579f585}\label{main_8cpp_aeb7a7ba1ab7e0406f1b5ab36d579f585} 
+\index{main.cpp@{main.cpp}!LED@{LED}}
+\index{LED@{LED}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{LED}{LED}}
+{\footnotesize\ttfamily \#define LED~2}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_afe461d27b9c48d5921c00d521181f12f}\label{main_8cpp_afe461d27b9c48d5921c00d521181f12f} 
+\index{main.cpp@{main.cpp}!loop@{loop}}
+\index{loop@{loop}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily void loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Loop function called repeatedly after the setup function. 
+
+\Hypertarget{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}\label{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d} 
+\index{main.cpp@{main.cpp}!setup@{setup}}
+\index{setup@{setup}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Setup function called once during program startup. 
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{main_8cpp_abedb381eaf857e52008fd20cf6270b1c}\label{main_8cpp_abedb381eaf857e52008fd20cf6270b1c} 
+\index{main.cpp@{main.cpp}!at\_client@{at\_client}}
+\index{at\_client@{at\_client}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{at\_client}{at\_client}}
+{\footnotesize\ttfamily auto\texorpdfstring{$\ast$}{*} at\+\_\+client = new At\+Client(\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8cpp_aba94be699c5a145fef37b68edb5af26d}{esp32}}, \mbox{\hyperlink{main_8cpp_ae4de5f96ee72cc6ad27b99241f51533c}{keys}})}
+
+
+
+Create an instance of At\+Client. 
+
+\Hypertarget{main_8cpp_aba94be699c5a145fef37b68edb5af26d}\label{main_8cpp_aba94be699c5a145fef37b68edb5af26d} 
+\index{main.cpp@{main.cpp}!esp32@{esp32}}
+\index{esp32@{esp32}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{esp32}{esp32}}
+{\footnotesize\ttfamily const auto\texorpdfstring{$\ast$}{*} esp32 = new At\+Sign(\"{}@20domestic45\"{})}
+
+
+
+Create instances of At\+Sign for different devices. 
+
+Assign a At\+Key file to the ESP32 program, the parameter is the name of the At\+Key file. It requires the user to have that At\+Key file under the ESP32 project folder or homepage/users/atkey. \Hypertarget{main_8cpp_a13de7b703b5accf136e2705da3984722}\label{main_8cpp_a13de7b703b5accf136e2705da3984722} 
+\index{main.cpp@{main.cpp}!flutter@{flutter}}
+\index{flutter@{flutter}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{flutter}{flutter}}
+{\footnotesize\ttfamily const auto\texorpdfstring{$\ast$}{*} flutter = new At\+Sign(\"{}@grumpy7196\"{})}
+
+
+
+Create an instance of At\+Sign for the Flutter program. 
+
+Assign a At\+Key file to the Flutter program, the parameter is the name of the At\+Key file. No requirement to have the At\+Key file under the folder. \Hypertarget{main_8cpp_ae4de5f96ee72cc6ad27b99241f51533c}\label{main_8cpp_ae4de5f96ee72cc6ad27b99241f51533c} 
+\index{main.cpp@{main.cpp}!keys@{keys}}
+\index{keys@{keys}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{keys}{keys}}
+{\footnotesize\ttfamily const auto keys = keys\+\_\+reader\+::read\+\_\+keys(\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8cpp_aba94be699c5a145fef37b68edb5af26d}{esp32}})}
+
+
+
+Read keys from the ESP32. 
+
+\Hypertarget{main_8cpp_ac86ab61d2192250321b5877b0af1084c}\label{main_8cpp_ac86ab61d2192250321b5877b0af1084c} 
+\index{main.cpp@{main.cpp}!pin@{pin}}
+\index{pin@{pin}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{pin}{pin}}
+{\footnotesize\ttfamily const int pin = 35}
+
